@@ -1,11 +1,14 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const app = express();
-const mongoose =require('mongoose')
+const mongoose =require('mongoose');
+const taskRoutes =require('./routes/task')
 
 
 
 dotenv.config();
+
+app.use('/task',taskRoutes)
 
 const port = process.env.PORT;
 const url = process.env.MONGODB_URI

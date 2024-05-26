@@ -9,4 +9,6 @@ app.get('/data',async(req,res)=>{
         message:"Tasks fetched successfully",
         tasks
     })
-})
+});
+
+module.exports = app;
